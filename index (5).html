@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>
+Happy Birthday Jyoti Bai ❤️
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+html,body{
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+background:linear-gradient(135deg,#ffdbe9,#fff6fb,#ffe5ef);
+
+}
+
+.page{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+padding:20px;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+.page.active{
+
+display:flex;
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:scale(.96);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.card{
+
+position:relative;
+
+width:92%;
+
+max-width:760px;
+
+padding:35px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.28);
+
+backdrop-filter:blur(15px);
+
+border:3px solid rgba(255,255,255,.75);
+
+box-shadow:0 0 40px rgba(255,20,147,.25);
+
+overflow:hidden;
+
+z-index:5;
+
+}
+
+.title{
+
+font-family:'Pacifico';
+
+font-size:52px;
+
+color:#ff0a74;
+
+text-shadow:
+
+0 0 18px white,
+
+0 0 28px hotpink;
+
+}
+
+.text{
+
+margin-top:25px;
+
+font-size:22px;
+
+line-height:1.9;
+
+color:#7a0046;
+
+}
+
+.nextBtn{
+
+position:absolute;
+
+right:25px;
+
+bottom:25px;
+
+width:68px;
+
+height:68px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+color:#ff0066;
+
+font-size:28px;
+
+cursor:pointer;
+
+box-shadow:0 0 18px hotpink;
+
+transition:.35s;
+
+}
+
+.nextBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+.videoFrame{
+
+padding:10px;
+
+border-radius:25px;
+
+background:linear-gradient(45deg,#ff1493,#ffffff,#ffd700,#ff1493);
+
+background-size:400%;
+
+animation:borderMove 6s linear infinite;
+
+box-shadow:0 0 25px hotpink;
+
+}
+
+video{
+
+width:100%;
+
+max-width:620px;
+
+border-radius:18px;
+
+display:block;
+
+}
+
+@keyframes borderMove{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:400%;
+
+}
+
+}
+
+.photo{
+
+width:290px;
+
+height:290px;
+
+object-fit:cover;
+
+border-radius:22px;
+
+border:8px solid white;
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+.float{
+
+position:absolute;
+
+bottom:-60px;
+
+font-size:28px;
+
+animation:fly linear infinite;
+
+pointer-events:none;
+
+opacity:.9;
+
+}
+
+@keyframes fly{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+/* ===========================
+      CONTINUE FROM PART 1
+=========================== */
+
+.fire{
+
+position:absolute;
+
+font-size:34px;
+
+pointer-events:none;
+
+animation:boom 2s linear forwards;
+
+}
+
+@keyframes boom{
+
+0%{
+
+transform:scale(.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(2.5);
+
+opacity:0;
+
+}
+
+}
+
+#flowerArea{
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.flower{
+
+position:absolute;
+
+top:-60px;
+
+font-size:28px;
+
+animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page active">
+
+<div class="card">
+
+<h1 class="title">
+
+🎂 Happy Birthday 🎂
+
+</h1>
+
+<div class="text">
+
+Happy Birthday
+
+<b>Jyoti Bai ❤️</b>
+
+<br><br>
+
+May your smile never fade.
+
+May every dream come true.
+
+May your life always be
+
+filled with Happiness,
+
+Love and Success.
+
+🌹🥰🎉
+
+</div>
+
+</div>
+
+<button
+class="nextBtn"
+onclick="nextPage()">
+
+➜
+
+</button>
+
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page">
+
+<div class="card">
+
+<h1 class="title">
+
+A Beautiful Video ❤️
+
+</h1>
+
+<br>
+
+<div class="videoFrame">
+
+<video
+id="video1"
+controls>
+
+<source src="video1.mp4">
+
+</video>
+
+</div>
+
+</div>
+
+<button
+class="nextBtn"
+onclick="nextPage()">
+
+➜
+
+</button>
+
+</section>
+
+<!-- ======================
+PART 3 CONTINUE
+====================== -->
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page">
+
+<div class="card">
+
+<h1 class="title">
+
+📸 Sweet Memories
+
+</h1>
+
+<br>
+
+<img
+src="photo1.jpg"
+class="photo">
+
+<br><br>
+
+<div class="text">
+
+A sister like you is life's
+
+most beautiful gift ❤️
+
+<br><br>
+
+Keep Smiling Forever 🌹
+
+</div>
+
+<audio
+id="song1"
+loop>
+
+<source src="song1.m4a">
+
+</audio>
+
+</div>
+
+<button
+class="nextBtn"
+onclick="nextPage()">
+
+➜
+
+</button>
+
+</section>
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page">
+
+<div id="flowerArea"></div>
+
+<div class="card">
+
+<h1 class="title">
+
+❤️ Best Wishes ❤️
+
+</h1>
+
+<div class="text">
+
+Dear
+
+<b>Jyoti Bai</b>
+
+<br><br>
+
+May every sunrise bring
+
+new happiness.
+
+<br><br>
+
+May every dream
+
+become reality.
+
+<br><br>
+
+Stay Happy 😊
+
+Stay Healthy 🌹
+
+Stay Blessed ✨
+
+<br><br>
+
+🎂 Happy Birthday 🎂
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const pages=
+
+document.querySelectorAll(".page");
+
+let current=0;
+
+function stopMedia(){
+
+document
+
+.querySelectorAll("video")
+
+.forEach(v=>{
+
+v.pause();
+
+v.currentTime=0;
+
+});
+
+document
+
+.querySelectorAll("audio")
+
+.forEach(a=>{
+
+a.pause();
+
+a.currentTime=0;
+
+});
+
+}
+
+function showPage(i){
+
+pages.forEach(p=>
+
+p.classList.remove("active"));
+
+pages[i]
+
+.classList.add("active");
+
+stopMedia();
+
+if(i===1){
+
+document
+
+.getElementById("video1")
+
+.play()
+
+.catch(()=>{});
+
+}
+
+if(i===2){
+
+document
+
+.getElementById("song1")
+
+.play()
+
+.catch(()=>{});
+
+}
+
+if(i===3){
+
+showFireworks();
+
+flowerRain();
+
+}
+
+}
+
+/* ======================
+PART 4 CONTINUE
+====================== */
+function nextPage(){
+
+if(current < pages.length-1){
+
+current++;
+
+showPage(current);
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+}
+
+/* ================= FIREWORKS ================= */
+
+function showFireworks(){
+
+let icons=[
+
+"🎆","🎇","✨",
+
+"❤️","💖",
+
+"🌹","🎉",
+
+"🎊","🎂"
+
+];
+
+for(let i=0;i<120;i++){
+
+let f=document.createElement("div");
+
+f.className="fire";
+
+f.innerHTML=
+
+icons[Math.floor(
+
+Math.random()*icons.length)];
+
+f.style.left=
+
+Math.random()*100+"vw";
+
+f.style.top=
+
+Math.random()*100+"vh";
+
+document.body.appendChild(f);
+
+setTimeout(()=>{
+
+f.remove();
+
+},2000);
+
+}
+
+}
+
+/* ================= FLOWER RAIN ================= */
+
+function flowerRain(){
+
+const area=
+
+document.getElementById("flowerArea");
+
+const flowers=[
+
+"🌹","🪷","🌸","💖",
+
+"❤️","✨"
+
+];
+
+for(let i=0;i<80;i++){
+
+let fl=
+
+document.createElement("div");
+
+fl.className="flower";
+
+fl.innerHTML=
+
+flowers[Math.floor(
+
+Math.random()*flowers.length)];
+
+fl.style.left=
+
+Math.random()*100+"vw";
+
+fl.style.animationDuration=
+
+(5+Math.random()*5)+"s";
+
+fl.style.animationDelay=
+
+(Math.random()*2)+"s";
+
+area.appendChild(fl);
+
+setTimeout(()=>{
+
+fl.remove();
+
+},10000);
+
+}
+
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+const hearts=[
+
+"❤️","💖","💕","🌹"
+
+];
+
+for(let i=0;i<35;i++){
+
+let h=
+
+document.createElement("div");
+
+h.className="float";
+
+h.innerHTML=
+
+hearts[Math.floor(
+
+Math.random()*hearts.length)];
+
+h.style.left=
+
+Math.random()*100+"vw";
+
+h.style.animationDuration=
+
+(6+Math.random()*6)+"s";
+
+h.style.animationDelay=
+
+(Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+}
+
+/* ================= START ================= */
+
+showPage(0);
+
+</script>
+
+</body>
+
+</html
